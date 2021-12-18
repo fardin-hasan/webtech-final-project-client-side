@@ -8,7 +8,7 @@ const Pay = () => {
     const [payment, setPayment] = useState(initialInfo)
     const [success, setSuccess] = useState(false);
 
-    const { user } = useAuth()
+    const { user, owner } = useAuth()
     const handleOnchange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -45,7 +45,7 @@ const Pay = () => {
     }
     return (
         <Box>
-            <Typography sx={{ my: 2, textAlign: 'center' }} variant="h4" >Payment </Typography>
+            <Typography sx={{ my: 2, textAlign: 'center' }} variant="h4" >{owner ? 'Advertisement Payment' : 'Payment'} </Typography>
             <Grid container spacing={2}>
                 <Grid sx={{ m: 'auto', textAlign: 'center' }} item xs={8} md={8}>
                     <form style={{ margin: 'auto', textAlign: 'center' }} onSubmit={handlePayment} >

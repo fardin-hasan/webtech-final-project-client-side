@@ -72,7 +72,7 @@ function Dashboard(props) {
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></NavLink>
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeManager`}><Button color="inherit">Make Manager</Button></NavLink>
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeOwner`}><Button color="inherit">Make Owner</Button></NavLink>
-                        <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/managerList`}><Button color="inherit">Manager User List</Button></NavLink>
+                        <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/managerList`}><Button color="inherit">Manage User List</Button></NavLink>
 
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageProducts`}><Button color="inherit">Manage Packages</Button></NavLink>
 
@@ -94,7 +94,7 @@ function Dashboard(props) {
                     owner && <Box>
 
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/profile`}><Button color="inherit">Edit Profile</Button></NavLink>
-                        <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/pay`}><Button color="inherit">Make Payment </Button></NavLink>
+                        <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/pay`}><Button color="inherit">Adds Payment </Button></NavLink>
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/review`}><Button color="inherit">Reviews</Button></NavLink>
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/addProduct`}><Button color="inherit">Post Advertisement</Button></NavLink>
 
