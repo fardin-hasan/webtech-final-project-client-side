@@ -75,7 +75,7 @@ function Dashboard(props) {
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/managerList`}><Button color="inherit">Manager User List</Button></NavLink>
 
                         <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageProducts`}><Button color="inherit">Manage Packages</Button></NavLink>
-                        <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageAllOrders`}><Button color="inherit">Manage All Bookings</Button></NavLink>
+
                     </Box>
 
                 }

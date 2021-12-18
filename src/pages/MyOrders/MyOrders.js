@@ -7,9 +7,28 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button, Typography } from '@mui/material';
+import { Box, Button, Modal, Typography } from '@mui/material';
 
 const MyOrders = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'black',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+        color: 'white',
+
+    };
+
+
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
@@ -28,16 +47,17 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount) {
-                    alert('deleted')
+
                     const remaingProducts = orders.filter(order => order._id !== id);
                     setOrders(remaingProducts)
+                    window.location.reload();
                 }
             })
 
 
     }
     return (
-        <div>
+        <Box>
             <Typography sx={{ mb: 5, textAlign: 'center' }} variant="h3" gutterBottom component="div">
                 My Orders
             </Typography>
@@ -68,13 +88,34 @@ const MyOrders = () => {
                                 <TableCell align="right">{row.phoneNumber}</TableCell>
                                 <TableCell align="right">{row.city}</TableCell>
 
-                                <TableCell align="right"><Button onClick={() => handleDelete(row._id)} variant="contained" color="error">Delete</Button></TableCell>
+                                <TableCell align="right">
+                                    <Button variant="contained" color="error" onClick={handleOpen}>Delete</Button>
+                                    <Modal
+                                        open={open}
+                                        onClose={handleClose}
+                                        aria-labelledby="modal-modal-title"
+                                        aria-describedby="modal-modal-description"
+                                    >
+                                        <Box sx={style}>
+                                            <Typography id="modal-modal-title" variant="h6" component="h2">
+                                                Delete!!!
+                                            </Typography>
+                                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                                Are You Sure? You Want to  Delete this Order?
+                                            </Typography>
+                                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                                <Button onClick={() => handleDelete(row._id)} variant="contained" color="error">Confirm</Button>
+                                            </Typography>
+
+                                        </Box>
+                                    </Modal>
+                                </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
             </TableContainer>
-        </div>
+        </Box>
     );
 };
 
