@@ -11,7 +11,7 @@ const MakeManager = () => {
 
     const handleManager = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/manager', {
+        fetch('https://safe-caverns-99351.herokuapp.com/users/manager', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

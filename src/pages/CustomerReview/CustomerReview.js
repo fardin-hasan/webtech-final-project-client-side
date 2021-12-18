@@ -22,7 +22,7 @@ const CustomerReview = () => {
             ...review
         }
 
-        fetch('http://localhost:5000/customerReview', {
+        fetch('https://safe-caverns-99351.herokuapp.com/customerReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

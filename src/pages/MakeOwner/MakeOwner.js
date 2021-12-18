@@ -11,7 +11,7 @@ const MakeOwner = () => {
 
     const handleOwner = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/houseOwner', {
+        fetch('https://safe-caverns-99351.herokuapp.com/users/houseOwner', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

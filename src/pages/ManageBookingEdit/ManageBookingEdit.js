@@ -13,7 +13,7 @@ const ManageBookingEdit = () => {
     const { id } = useParams();
     const [bookingEdit, setBookingEdit] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/manageEditList/${id}`
+        const url = `https://safe-caverns-99351.herokuapp.com/manageEditList/${id}`
         console.log(id)
         fetch(url)
             .then(res => res.json())
@@ -34,7 +34,7 @@ const ManageBookingEdit = () => {
         const packages = {
             ...update
         };
-        fetch('http://localhost:5000/package/update', {
+        fetch('https://safe-caverns-99351.herokuapp.com/package/update', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

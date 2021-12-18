@@ -24,7 +24,7 @@ const AddProduct = () => {
             ...packages
         }
 
-        fetch('http://localhost:5000/allPackages', {
+        fetch('https://safe-caverns-99351.herokuapp.com/allPackages', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

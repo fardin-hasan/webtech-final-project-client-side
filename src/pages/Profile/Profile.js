@@ -22,7 +22,7 @@ const Profile = () => {
         const user = {
             ...update
         };
-        fetch('http://localhost:5000/users/update', {
+        fetch('https://safe-caverns-99351.herokuapp.com/users/update', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

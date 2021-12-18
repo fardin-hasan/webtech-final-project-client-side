@@ -26,14 +26,14 @@ const ManagerList = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/manageUserList')
+        fetch('https://safe-caverns-99351.herokuapp.com/manageUserList')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/manageUserList/${id}`;
+        const url = `https://safe-caverns-99351.herokuapp.com/manageUserList/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

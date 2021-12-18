@@ -34,14 +34,14 @@ const ManageAllOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/manageAllOrders`
+        const url = `https://safe-caverns-99351.herokuapp.com/manageAllOrders`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/manageAllOrders/${id}`;
+        const url = `https://safe-caverns-99351.herokuapp.com/manageAllOrders/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

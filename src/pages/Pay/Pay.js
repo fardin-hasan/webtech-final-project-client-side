@@ -25,7 +25,7 @@ const Pay = () => {
             ...payment
         }
 
-        fetch('http://localhost:5000/userPayment', {
+        fetch('https://safe-caverns-99351.herokuapp.com/userPayment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

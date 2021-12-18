@@ -9,7 +9,7 @@ const WelcomeMsg = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        const url = `http://localhost:5000/singleUser?email=${user.email}`
+        const url = `https://safe-caverns-99351.herokuapp.com/singleUser?email=${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setName(data));

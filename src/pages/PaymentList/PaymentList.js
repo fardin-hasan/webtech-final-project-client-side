@@ -13,7 +13,7 @@ const PaymentList = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/paymentList`
+        const url = `https://safe-caverns-99351.herokuapp.com/paymentList`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
@@ -37,7 +37,7 @@ const PaymentList = () => {
 
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/paymentList/${id}`;
+        const url = `https://safe-caverns-99351.herokuapp.com/paymentList/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

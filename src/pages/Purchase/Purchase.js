@@ -12,7 +12,7 @@ const Purchase = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5000/booking/${id}`
+        const url = `https://safe-caverns-99351.herokuapp.com/booking/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setPurchase(data))
@@ -33,7 +33,7 @@ const Purchase = () => {
 
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://safe-caverns-99351.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

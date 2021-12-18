@@ -16,20 +16,20 @@ const useFirebase = () => {
 
     // verify manager
     useEffect(() => {
-        fetch(`http://localhost:5000/users/manager/${user.email}`)
+        fetch(`https://safe-caverns-99351.herokuapp.com/users/manager/${user.email}`)
             .then(res => res.json())
             .then(data => setManager(data.manager))
     }, [user.email]);
 
     // verify admin
     useEffect(() => {
-        fetch(`http://localhost:5000/users/admin/${user.email}`)
+        fetch(`https://safe-caverns-99351.herokuapp.com/users/admin/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email]);
     // verify owner
     useEffect(() => {
-        fetch(`http://localhost:5000/users/houseOwner/${user.email}`)
+        fetch(`https://safe-caverns-99351.herokuapp.com/users/houseOwner/${user.email}`)
             .then(res => res.json())
             .then(data => setOwner(data.owner))
     }, [user.email]);
@@ -100,7 +100,7 @@ const useFirebase = () => {
     // save user
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://safe-caverns-99351.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

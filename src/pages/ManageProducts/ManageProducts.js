@@ -35,13 +35,13 @@ const ManageProducts = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allPackages')
+        fetch('https://safe-caverns-99351.herokuapp.com/allPackages')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/managePackages/${id}`;
+        const url = `https://safe-caverns-99351.herokuapp.com/managePackages/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
