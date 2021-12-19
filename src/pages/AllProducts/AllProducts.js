@@ -12,7 +12,7 @@ const AllProducts = () => {
     }, [])
 
     return (
-        <Box>
+        <Box >
             <Typography sx={{ mb: 5, textAlign: 'center' }} variant="h3" gutterBottom component="div">
                 Our Packages
             </Typography>

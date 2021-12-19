@@ -42,7 +42,6 @@ const MakeAdmin = () => {
                             name='email'
                             type='email'
                             onBlur={handleOnBlur}
-
                             required
                             label="User Email"
                             variant="standard" />

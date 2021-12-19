@@ -32,10 +32,6 @@ const PaymentList = () => {
         color: 'white',
 
     };
-
-
-
-
     const handleDelete = id => {
         const url = `https://safe-caverns-99351.herokuapp.com/paymentList/${id}`;
         fetch(url, {

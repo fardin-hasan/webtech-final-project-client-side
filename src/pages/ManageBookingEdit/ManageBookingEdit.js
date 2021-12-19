@@ -87,8 +87,6 @@ const ManageBookingEdit = () => {
                             required
                             label="Rating"
                             variant="standard" />
-
-
                         <TextField
                             id="filled-multiline-flexible"
                             sx={{ width: '75%', my: 1, py: 3 }}

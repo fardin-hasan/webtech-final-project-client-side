@@ -31,7 +31,7 @@ const ManageAllOrders = () => {
     };
 
 
-    const { user } = useAuth();
+    // const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         const url = `https://safe-caverns-99351.herokuapp.com/manageAllOrders`

@@ -25,6 +25,7 @@ const ManagerList = () => {
     };
 
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         fetch('https://safe-caverns-99351.herokuapp.com/manageUserList')
             .then(res => res.json())
@@ -54,7 +55,7 @@ const ManagerList = () => {
 
     return (
         < Box >
-            <Typography variant='h4' sx={{ fontWeight: 'medium', textAlign: 'center' }}>Manager User List</Typography>
+            <Typography variant='h4' sx={{ fontWeight: 'medium', textAlign: 'center' }}>Manage User List</Typography>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>

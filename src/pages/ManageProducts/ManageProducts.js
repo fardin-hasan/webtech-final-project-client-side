@@ -61,6 +61,7 @@ const ManageProducts = () => {
     return (
         < Box >
             <Typography variant='h4' sx={{ fontWeight: 'medium', textAlign: 'center' }}>Manage  Packages</Typography>
+
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -90,6 +91,7 @@ const ManageProducts = () => {
                                 <TableCell align="center">
                                     <NavLink style={{ textDecoration: 'none', color: 'black' }} to={`/manageBookingEdit/${row._id}`}><Button variant="contained">Edit</Button></NavLink>
                                 </TableCell>
+
                                 <TableCell align="center">
 
                                     <Button variant="contained" color="error" onClick={handleOpen}>Delete</Button>
@@ -115,6 +117,8 @@ const ManageProducts = () => {
                                     {/* 
                                 <Button onClick={() => handleDelete(row._id)} variant="contained">Delete</Button> */}
                                 </TableCell>
+
+
                             </TableRow>
                         ))}
                     </TableBody>
